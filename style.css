@@ -1,0 +1,199 @@
+/* Variable */
+:root {
+  /* Color */
+  --nav-color: #b9baff;
+  --nav-font: #ff9b92;
+  --black-color: #e6cdcd;
+  --gray-color: #181212;
+  --light-gray: #c70c0c;
+
+  /* Size */
+  --mini-padding: 10px;
+  --div-margin: 15px;
+  --img_size: ;
+}
+/* Setting */
+* {
+  font-family: "Nanum Pen Script", cursive;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff9b7;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/* Nav bar */
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  background-color: var(--nav-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px var(--div-margin);
+  font-size: 25px;
+}
+.nav_logo img {
+  background-color: white;
+  width: 35px;
+  border-radius: 50%;
+}
+.nav_menu {
+  display: flex;
+  align-items: center;
+}
+.nav_menu a {
+  padding: 0px var(--mini-padding);
+  color: var(--gray-color);
+}
+.nav_menu a:hover {
+  color: palevioletred;
+}
+.nav_btn {
+  display: none;
+  background: none;
+  border: none;
+  height: 50px;
+  font-size: 25px;
+  padding: 0px 10px;
+  color: palevioletred;
+}
+
+/* Main */
+main {
+  display: flex;
+  align-items: center;
+  margin: 130px 100px;
+  /* Backgroung img*/
+  z-index: 3;
+}
+.me_img img {
+  width: 250px;
+  border-radius: 40px;
+  border: 5px solid black;
+  float: left;
+}
+.me_info {
+  margin: 60px;
+}
+p {
+  display: block;
+  font-size: 30px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+/* .me_intro {
+  color: var(--black-color);
+  font-size: 35px;
+  margin: 60px;
+} */
+.me_more {
+  background: none;
+  border: none;
+  background-color: #41584b;
+  color: #ffe0d7;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* I like */
+
+.ilike {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  z-index: 2;
+}
+.like_title {
+  margin-bottom: 50px;
+  font-size: 50px;
+  color: black;
+}
+.like_things {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like_things img {
+  width: 300px;
+  height: 300px;
+  display: block;
+}
+
+.things {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+}
+.overlay {
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  background-color: yellow; /* 여기선 색 별로 상관은 없는 듯?*/
+}
+.things:hover .overlay {
+  opacity: 1;
+}
+.text {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+figure {
+  text-align: center;
+  font-size: 30px;
+}
+.things:hover .overlay_left,
+.things:hover .overlay_right {
+  width: 100%;
+}
+
+@media screen and (max-width: 973px) {
+  .nav_btn {
+    display: block;
+  }
+  .nav_menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  .nav_menu a,
+  .nav_menu ul {
+    margin-bottom: 10px;
+  }
+
+  main {
+    margin-top: 160px;
+  }
+  .like {
+    display: flex;
+  }
+  .like_things {
+    display: flex;
+    flex-direction: column;
+  }
+}
